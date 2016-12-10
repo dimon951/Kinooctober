@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/darker_gray">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="3dp"
+        app:cardPreventCornerOverlap="false"
+        android:elevation="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fon_dialoga_pri_zvonke"
+    android:gravity="center">
+
+    <dmitriy.deomin.kinooctober.libries.TextView_new
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Позвонить 7-47545-5-21-91 ?"
+        android:id="@+id/textView2"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Нет"
+            android:id="@+id/zvonit_net"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Да"
+            android:id="@+id/zvonit_da"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+</LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

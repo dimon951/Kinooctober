@@ -1,0 +1,109 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/fon_registracia"
+    android:padding="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView7"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <dmitriy.deomin.kinooctober.libries.TextView_new
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Логин"
+                android:id="@+id/reg_textView_login" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reg_editText_login" />
+
+            <dmitriy.deomin.kinooctober.libries.TextView_new
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Пароль"
+                android:id="@+id/textView22" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reg_editText_parol" />
+
+            <dmitriy.deomin.kinooctober.libries.TextView_new
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Подтверждение пароля"
+                android:id="@+id/textView23" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reg_editText_parol_podt" />
+
+            <dmitriy.deomin.kinooctober.libries.TextView_new
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-mail"
+                android:id="@+id/textView24" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reg_editText_mail" />
+
+            <dmitriy.deomin.kinooctober.libries.TextView_new
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Имя"
+                android:id="@+id/textView25" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reg_editText_name"
+                android:hint="Имя в коментариях" />
+
+            <dmitriy.deomin.kinooctober.libries.TextView_new
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Фамилия"
+                android:id="@+id/textView26" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reg_editText_famali" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сохранить"
+                android:id="@+id/reg_button_save"
+                android:background="@drawable/button_fon_menu"
+                android:onClick="reg" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar3"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

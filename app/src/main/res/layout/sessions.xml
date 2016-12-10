@@ -1,0 +1,36 @@
+
+
+
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dmitriy.deomin.kinooctober.kino_sourse.Sessions">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/conteiner_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView_ras"
+        android:divider="@null" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <dmitriy.deomin.kinooctober.libries.TextView_new
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/potanite_dla_obnovlenia"
+        android:id="@+id/textView_tab_refresh_sessions"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="30dp"
+        android:visibility="gone" />
+</FrameLayout>
+

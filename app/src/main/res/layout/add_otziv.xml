@@ -1,0 +1,65 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="dmitriy.deomin.kinooctober.kino_sourse.Add_otziv"
+    android:orientation="vertical"
+     android:paddingLeft="10dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Название фильма"
+        android:id="@+id/textView_name_film_otziv"
+        android:layout_gravity="left|center_horizontal"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Заголовок отзыва"
+        android:id="@+id/textView19"
+        android:textSize="15dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_add_zagolovok"
+        android:hint="Заголовок"
+        android:layout_gravity="left|center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Описание"
+        android:id="@+id/textView20"
+        android:layout_gravity="left|center_horizontal"
+        android:textSize="15dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_add_text_otziva"
+        android:layout_gravity="center_horizontal"
+        android:hint="текст отзыва" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сохранить"
+        android:id="@+id/button5"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_fon_menu"
+        android:onClick="addOtziv" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar2"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+</LinearLayout>

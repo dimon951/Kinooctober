@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fon_ava">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logo"
+        android:id="@+id/button_logo_ava"
+        android:background="@drawable/button_fon_menu"
+        android:onClick="Clik_logo_ava"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView3" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/ava1_liner">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView_ava"
+                    android:onClick="Clik"
+                    android:src="@mipmap/ic_launcher"
+                    android:visibility="visible"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ava2_liner">
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="Название:"
+                    android:id="@+id/textView_nazvanie"
+                    android:textSize="11dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:text="load"
+                    android:id="@+id/textView_nazvanie_value"
+                    android:layout_marginRight="5dp"
+                    android:textSize="17dp"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="left|center"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ava3_liner">
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="Оригинальное\nназвание:"
+                    android:id="@+id/textView_nazvanie_originalinoe"
+                    android:textSize="11dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:text="load"
+                    android:id="@+id/textView_originalnoe_nazvanie_value"
+                    android:layout_marginRight="5dp"
+                    android:textSize="17dp"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="left|center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ava4_liner">
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="Описание:"
+                    android:id="@+id/textView_opisanie"
+                    android:textSize="11dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="load"
+                    android:id="@+id/textView_opisanie_value"
+                    android:layout_marginRight="5dp"
+                    android:textSize="17dp"
+                    android:gravity="left|center"
+                    android:layout_marginLeft="2dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/ava5_liner">
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="Пр-ть:"
+                    android:id="@+id/textView_prodolgitelnost"
+                    android:textSize="11dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="load"
+                    android:id="@+id/textView_prodolgitelnost_value"
+                    android:layout_marginRight="5dp"
+                    android:textSize="17dp"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="left|center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/ava6_liner">
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="Категория:"
+                    android:id="@+id/textView_kategoria"
+                    android:textSize="11dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="load"
+                    android:id="@+id/textView_kategoria_value"
+                    android:layout_marginRight="5dp"
+                    android:textSize="17dp"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="left|center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/ava7_liner">
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="Жанр:"
+                    android:id="@+id/textView_ganr"
+                    android:textSize="11dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="load"
+                    android:id="@+id/textView_ganr_value"
+                    android:layout_marginRight="5dp"
+                    android:textSize="17dp"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="left|center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/ava8_liner">
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="Актёры:"
+                    android:id="@+id/textView_acteri"
+                    android:textSize="11dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="load"
+                    android:id="@+id/textView_acteri_value"
+                    android:layout_marginRight="5dp"
+                    android:textSize="17dp"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="left|center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/ava9_liner">
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="Режиссёр:"
+                    android:id="@+id/textView_regiser"
+                    android:textSize="11dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="load"
+                    android:id="@+id/textView_regiser_value"
+                    android:layout_marginRight="5dp"
+                    android:textSize="17dp"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="left|center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ava10_liner"
+                android:gravity="center">
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Отзывы"
+                    android:id="@+id/textView_otzizi_k_filmu"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Добавить отзыв"
+                    android:id="@+id/button_add_otziv"
+                    android:background="@drawable/button_fon_menu"
+                    android:onClick="Add_otziv" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,100 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Задать"
+                android:id="@+id/button_add_vopr"
+                android:layout_gravity="center_horizontal|top"
+                android:background="@drawable/button_fon_menu"
+                android:layout_margin="7dp" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/conteiner_swipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="21dp"
+            android:layout_marginTop="31dp">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/listView_vopr"
+                android:layout_marginBottom="25dp"
+                android:divider="@null" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:id="@+id/page_ponel_vopr"
+            android:visibility="visible"
+            android:layout_gravity="bottom"
+            android:layout_margin="2dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&lt;"
+                android:id="@+id/pag1_vopr"
+                android:layout_weight="1"
+                android:onClick="page_clik"
+                android:background="@drawable/button_fon_menu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="1"
+                android:id="@+id/textView_nomer_tekusey_stranici_vopr"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginRight="3dp"
+                android:layout_marginLeft="3dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">"
+                android:id="@+id/page3_vopr"
+                android:layout_weight="1"
+                android:onClick="page_clik"
+                android:background="@drawable/button_fon_menu" />
+
+    </LinearLayout>
+
+    <dmitriy.deomin.kinooctober.libries.TextView_new
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Потяните вниз для обновления"
+        android:id="@+id/textView_tab_refresh_vopr"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_gravity="center" />
+
+
+
+</FrameLayout>

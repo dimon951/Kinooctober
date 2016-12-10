@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="dmitriy.deomin.kinooctober.Info.Pravila_kinoteatra"
+    android:id="@+id/fon_pravil_kinoteatra">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView8"
+        android:layout_gravity="center"
+        android:fillViewport="false"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/n_306_n_17_11_2000_859_n_n_n_n_n_n_100_n_288_n_112_n_n_1_n_n_2_n_1_n_1_n_n_9_00_n_9_00_20_n_9_00_n_11_00_0_00_n_quot_quot_10_00_4_00_6_00_n_9_00_n_9_00_n_9_00_n_n_n_n_n_n_n_n_n_n_n_n_n_n_n_n_n_0_5_n_n_n_n_n_n_n_n_n_n_n_n_n_n_n_n_n_3d_n_d_n_3d_1000_n_d_n_d_n_d_n"
+            android:id="@+id/textView_pravila_kinoteatra"
+            android:textSize="15sp" />
+    </ScrollView>
+
+</LinearLayout>

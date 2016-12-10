@@ -1,0 +1,120 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/fon_user_logi_i_parol"
+    android:gravity="center">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <dmitriy.deomin.kinooctober.libries.TextView_new
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Введите логин и пароль"
+            android:id="@+id/title_user_aut"
+            android:gravity="center"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <dmitriy.deomin.kinooctober.libries.TextView_new
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Логин:"
+                android:id="@+id/login_login_text"
+                android:textSize="15dp"
+                android:minWidth="60dp"
+                android:gravity="center" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/editText_login"
+                android:layout_weight="1"
+                android:hint="login" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <dmitriy.deomin.kinooctober.libries.TextView_new
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Пароль:"
+                android:id="@+id/textView16"
+                android:minWidth="60dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="Pokazat_porol" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:id="@+id/editText_parol"
+                android:layout_weight="1"
+                android:hint="pasword"
+                android:inputType="textPassword" />
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Ok"
+            android:id="@+id/ok_user_login_parol"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="5dp"
+            android:onClick="clik_login_parol_ok"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Зарегистрироваться"
+            android:id="@+id/button_registracia"
+            android:layout_weight="1"
+            android:background="@drawable/button_fon_menu"
+            android:onClick="registracia"
+            android:textSize="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Вспомнить"
+            android:id="@+id/button_memori"
+            android:layout_weight="1"
+            android:background="@drawable/button_fon_menu"
+            android:onClick="mamori"
+            android:enabled="false"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+</LinearLayout>

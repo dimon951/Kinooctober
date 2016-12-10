@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dmitriy.deomin.kinooctober.Info.Add_vopr"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingTop="5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Имя"
+        android:id="@+id/textView27"
+        android:textSize="15dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vopr_editText_name"
+        android:hint="имя"
+        android:minWidth="150dp"
+        android:minHeight="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-mail"
+        android:id="@+id/textView28"
+        android:textSize="15dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vopr_editText_email"
+        android:hint="почта"
+        android:background="@color/svetlo_geltiy"
+        android:minWidth="150dp"
+        android:minHeight="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вопрос"
+        android:id="@+id/textView29"
+        android:textSize="15dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/vopr_editText_vopr"
+        android:background="@color/blu_bridg"
+        android:minHeight="50dp" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar4"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Отправить"
+        android:id="@+id/button_send"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_fon_menu"
+        android:onClick="addOtziv"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>

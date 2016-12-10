@@ -1,0 +1,71 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="dmitriy.deomin.kinooctober.kino_sourse.News"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/conteiner_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="25dp">
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView_news"
+        android:layout_marginBottom="25dp"
+        android:divider="@null" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:id="@+id/page_ponel"
+        android:visibility="visible"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt;"
+            android:id="@+id/pag1"
+            android:layout_weight="1"
+            android:onClick="page_clik"
+            android:background="@drawable/button_fon_menu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="1"
+            android:id="@+id/textView_nomer_tekusey_stranici"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=">"
+            android:id="@+id/page3"
+            android:layout_weight="1"
+            android:onClick="page_clik"
+            android:background="@drawable/button_fon_menu" />
+    </LinearLayout>
+
+    <dmitriy.deomin.kinooctober.libries.TextView_new
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/potanite_dla_obnovlenia"
+        android:id="@+id/textView_tab_refresh_news"
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:visibility="gone" />
+
+
+</FrameLayout>

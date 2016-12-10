@@ -1,0 +1,162 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    tools:context="dmitriy.deomin.kinooctober.Main"
+    android:focusable="true"
+    android:clickable="true"
+    android:id="@+id/liner_boss"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:id="@+id/liner_menu">
+
+        <dmitriy.deomin.kinooctober.libries.RippleView
+            android:layout_weight="1"
+            android:id="@+id/logo_riple"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            ripple:alphaFactor="0.7"
+            ripple:rippleColor="#58FAAC"
+            ripple:hover="true"
+            android:background="@drawable/titl_text" />
+
+        <com.nhaarman.supertooltips.ToolTipRelativeLayout
+            android:id="@+id/tol_menu"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+        />
+
+    </RelativeLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <Button
+                android:text="@string/news_strin"
+                android:id="@+id/button_news"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="9dp" />
+
+            <Button
+                android:text="@string/sesions_string"
+                android:id="@+id/button_sessions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="9dp" />
+
+            <Button
+                android:text="@string/skoro_string"
+                android:id="@+id/button_skoro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="9dp" />
+
+            <Button
+                android:text="@string/щеяшмш_ыекштп"
+                android:id="@+id/button_otzivi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="9dp" />
+
+            <Button
+                android:text="@string/vopros_string"
+                android:id="@+id/button_vopros"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="9dp" />
+
+            <Button
+                android:text="@string/mani_string"
+                android:id="@+id/button_mani"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="9dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/pager"
+                android:layout_weight="1">
+           </android.support.v4.view.ViewPager>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/liner_update_panel">
+
+                <TextView
+                    android:text="Есть обновление"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_maseg_update"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:text="Обновить"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/button_update"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent" />
+
+                    <Button
+                        android:text="Закрыть"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/button_close_update" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        android:layout_weight="0">
+    </com.google.android.gms.ads.AdView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fonts_vibor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dmitriy.deomin.kinooctober.Fonts_vibor"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:text="Выбрать этот шрифт(Tweed)"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/button_font_tweed"
+                android:onClick="save_Tweed"
+                android:background="@android:color/transparent" />
+            <Button
+                android:text="Выбрать этот шрифт(Badaboom)"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/button_font_badaboom"
+                android:onClick="save_Badaboom"
+                android:background="@android:color/transparent" />
+            <Button
+                android:text="Выбрать этот шрифт(Kramola)"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/button_font_kramola"
+                android:onClick="save_Kramola"
+                android:background="@android:color/transparent" />
+            <Button
+                android:text="Выбрать этот шрифт(Capture)"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/button_font_capture"
+                android:onClick="save_Capture"
+                android:background="@android:color/transparent" />
+            <Button
+                android:text="Выбрать этот шрифт(Bemount)"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/button_font_bemount"
+                android:onClick="save_Bemount"
+                android:background="@android:color/transparent" />
+            <Button
+                android:text="Выбрать этот шрифт(Smeshariki)"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/button_font_Smeshariki"
+                android:onClick="save_Smeshariki"
+                android:background="@android:color/transparent" />
+            <Button
+                android:text="Выбрать этот шрифт(Snowstorm)"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/button_font_Snowstorm"
+                android:onClick="save_Snowstorm"
+                android:background="@android:color/transparent" />
+            <Button
+                android:text="Выбрать этот шрифт(Izhitsa)"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/button_font_Izhitsa"
+                android:onClick="save_Izhitsa"
+                android:background="@android:color/transparent" />
+
+
+
+
+
+
+
+            <Button
+                android:text="Выбрать этот шрифт(Rotonda)"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/button_font_Rotonda"
+                android:onClick="save_Rotonda"
+                android:background="@android:color/transparent" />
+            <Button
+                android:text="Выбрать этот шрифт(Frezer)"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/button_font_Frezer"
+                android:onClick="save_Frezer"
+                android:background="@android:color/transparent" />
+            <Button
+                android:text="Выбрать этот шрифт(Futured)"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/button_font_Futured"
+                android:onClick="save_Futured"
+                android:background="@android:color/transparent" />
+            <Button
+                android:text="Выбрать этот шрифт(Yarin)"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/button_font_Yarin"
+                android:onClick="save_Yarin"
+                android:background="@android:color/transparent" />
+            <Button
+                android:text="Выбрать этот шрифт(Sensei)"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/button_font_Sensei"
+                android:onClick="save_Sensei"
+                android:background="@android:color/transparent" />
+            <Button
+                android:text="Выбрать этот шрифт(PF_DinText)"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/button_font_PF_DinText"
+                android:onClick="save_PF_DinText"
+                android:background="@android:color/transparent" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

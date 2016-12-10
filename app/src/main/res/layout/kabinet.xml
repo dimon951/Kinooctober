@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dmitriy.deomin.kinooctober.User_kabinet.Kabinet"
+    android:orientation="vertical"
+    android:id="@+id/fon_lichniy_kabinet">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_imageView_ava"
+            android:src="@android:drawable/ic_menu_mylocation"
+            android:minHeight="150dp"
+            android:maxHeight="150dp"
+            android:maxWidth="100dp"
+            android:minWidth="100dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Имя"
+                    android:id="@+id/textView30"
+                    android:minWidth="50dp" />
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Иванов Иван"
+                    android:id="@+id/user_textView_neme" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal">
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="О себе"
+                    android:id="@+id/textView32"
+                    android:minWidth="50dp" />
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Все зашибись"
+                    android:id="@+id/user_textView_osebe" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Мои Отзывы"
+        android:id="@+id/button8"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/transparent"
+        android:onClick="user_otzivi" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Мои настройки"
+        android:id="@+id/button9"
+        android:background="@android:color/transparent"
+        android:onClick="user_setting" />
+
+</LinearLayout>

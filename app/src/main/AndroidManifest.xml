@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dmitriy.deomin.kinooctober"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:launchMode="singleTop"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Main"
+            android:label="Кинотеатр Октябрь"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Abaut" />
+        <activity android:name=".Setting" />
+        <activity android:name=".kino_sourse.Ava" />
+        <activity android:name=".kino_sourse.Ava_otzivi" />
+        <activity
+            android:name=".kino_sourse.Ava_news"
+            android:label="@string/title_activity_ava_news" />
+        <activity
+            android:name=".kino_sourse.Add_otziv"
+            android:label="@string/title_activity_add_otziv" />
+        <activity
+            android:name=".User_kabinet.User_login_parol"
+            android:label="@string/title_activity_user_login_parol" />
+        <activity
+            android:name=".kino_sourse.Ava_skoro"
+            android:label="@string/title_activity_ava_skoro" />
+        <activity
+            android:name=".User_kabinet.Registracia"
+            android:label="@string/title_activity_registracia" />
+        <activity
+            android:name=".Mamori"
+            android:label="@string/title_activity_mamori" />
+        <activity
+            android:name=".Info.Add_vopr"
+            android:label="@string/title_activity_add_vopr" />
+        <activity
+            android:name=".Info.Ava_vopr"
+            android:label="@string/title_activity_ava_vopr" />
+        <activity
+            android:name=".Info.Pravila_kinoteatra"
+            android:label="@string/title_activity_pravila_kinoteatra" />
+        <activity
+            android:name=".User_kabinet.Kabinet"
+            android:label="@string/title_activity_kabinet" />
+        <activity android:name=".Fonts_vibor" />
+
+        <service
+            android:name=".servis.Run_update_site"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <receiver android:name=".servis.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

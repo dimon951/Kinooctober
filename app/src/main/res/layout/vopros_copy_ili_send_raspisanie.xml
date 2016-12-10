@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/darker_gray">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="3dp"
+        app:cardPreventCornerOverlap="false"
+        android:elevation="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fon_send_raspisanie_ili_copy_bufer"
+    android:background="@color/fon"
+    android:gravity="center">
+
+    <dmitriy.deomin.kinooctober.libries.TextView_new
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Что будем делать с расписанием?"
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:layout_marginTop="20dp" />
+
+    <dmitriy.deomin.kinooctober.libries.TextView_new
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:id="@+id/previu_raspisanie"
+        android:textSize="12dp"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:singleLine="false"
+        android:inputType="textMultiLine" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="В буфер?"
+            android:id="@+id/button_copy_raspisanie_v_bufer"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+
+        <dmitriy.deomin.kinooctober.libries.TextView_new
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="или"
+            android:id="@+id/textView4" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Отправим?"
+            android:id="@+id/button_send_raspisanie_sms"
+            android:layout_weight="1"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+</LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    </LinearLayout>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="3dp"
+        app:cardPreventCornerOverlap="false"
+        android:elevation="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp">
+
+    <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/fon_glavniy">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:baselineAligned="false"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/delegat_ava"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="fitXY"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:minHeight="200dp"
+                android:minWidth="140dp"
+                android:maxHeight="200dp"
+                android:maxWidth="140dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Название фильма"
+                    android:id="@+id/delegat_title"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="в кино с 21.01.2015"
+                    android:id="@+id/delegat_pokaz_nachalo"
+                    android:textSize="8dp" />
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Описание фильма ,основная инфа, че та ма почеп и почему , это произошло , ляляля"
+                    android:id="@+id/delegat_opisanie"
+                    android:textSize="10dp"
+                    android:layout_marginTop="3dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/liner_raspisania_segoda_color">
+
+                    <dmitriy.deomin.kinooctober.libries.TextView_new
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Сеансы сегодня"
+                        android:id="@+id/delegat_raspisanie_segodna"
+                        android:textSize="16sp"
+                        android:layout_marginTop="2dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <dmitriy.deomin.kinooctober.libries.TextView_new
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="01:00"
+                            android:id="@+id/textView_time1"
+                            android:layout_marginRight="1dp"
+                            android:background="#ffff3d23"
+                            android:enabled="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="14dp" />
+
+                        <dmitriy.deomin.kinooctober.libries.TextView_new
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="02:00"
+                            android:id="@+id/textView_time2"
+                            android:layout_marginRight="1dp"
+                            android:background="#ff2ddd14"
+                            android:enabled="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="14dp" />
+
+                        <dmitriy.deomin.kinooctober.libries.TextView_new
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="03:00"
+                            android:id="@+id/textView_time3"
+                            android:layout_marginRight="1dp"
+                            android:background="#ff253bdd"
+                            android:enabled="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="14dp" />
+
+                        <dmitriy.deomin.kinooctober.libries.TextView_new
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="03:00"
+                            android:id="@+id/textView_time4"
+                            android:background="#ff253bdd"
+                            android:enabled="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp">
+
+                        <dmitriy.deomin.kinooctober.libries.TextView_new
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="04:00"
+                            android:id="@+id/textView_time5"
+                            android:layout_marginRight="1dp"
+                            android:enabled="false"
+                            android:textColor="@android:color/white"
+                            android:visibility="visible"
+                            android:textSize="14dp" />
+
+                        <dmitriy.deomin.kinooctober.libries.TextView_new
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="05:00"
+                            android:id="@+id/textView_time6"
+                            android:layout_marginRight="1dp"
+                            android:enabled="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="14dp" />
+
+                        <dmitriy.deomin.kinooctober.libries.TextView_new
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="06:00"
+                            android:id="@+id/textView_time7"
+                            android:layout_marginRight="1dp"
+                            android:enabled="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="14dp" />
+
+                        <dmitriy.deomin.kinooctober.libries.TextView_new
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="06:00"
+                            android:id="@+id/textView_time8"
+                            android:enabled="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                    android:id="@+id/expandableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ael_expanded="false"
+                    app:ael_duration="500"
+                    app:ael_interpolator="bounce"
+                    app:ael_orientation="vertical">
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Расписание все"
+                    android:id="@+id/delegat_raspisanie_vse"
+                    android:textSize="10dp"
+                    android:textStyle="bold"/>
+
+                </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/liner_like_i_dislike">
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/add_coment"
+            android:background="@drawable/icon_dark_edit" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/b_dislike"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/dislaki" />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/b_likes"
+            android:background="@drawable/like" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/liner_komentariev">
+
+        <dmitriy.deomin.kinooctober.libries.TextView_new
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Коментарий какойнибуть"
+            android:id="@+id/text_coment"
+            android:gravity="right"
+            android:maxHeight="100dp"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+</LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,188 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView2"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/fon_mani">
+
+            <dmitriy.deomin.kinooctober.libries.TextView_new
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Цены билетов в кинотеатре &quot;ОКТЯБРЬ&quot;"
+                android:id="@+id/textView6"
+                android:textSize="20sp"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/mani_format">
+
+                    <dmitriy.deomin.kinooctober.libries.TextView_new
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Будни(2D,3D)"
+                        android:id="@+id/textView8"
+                        android:layout_weight="1"
+                        android:textSize="19dp"
+                        android:gravity="center"
+                        android:layout_margin="7dp"
+                        android:textIsSelectable="false"
+                        android:textStyle="bold" />
+
+                    <dmitriy.deomin.kinooctober.libries.TextView_new
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" с 9:00 до 12:00 - 150р \nпосле 12:00 - 250р"
+                        android:id="@+id/textView9" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/mani_format2">
+
+                    <dmitriy.deomin.kinooctober.libries.TextView_new
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Выходные(2D,3D)"
+                        android:id="@+id/textView7"
+                        android:layout_weight="1"
+                        android:textSize="19dp"
+                        android:gravity="center"
+                        android:layout_margin="7dp"
+                        android:textStyle="bold" />
+
+                    <dmitriy.deomin.kinooctober.libries.TextView_new
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" с 9:00 до 12:00 - 200р \nпосле 12:00 - 300р"
+                        android:id="@+id/textView10" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:visibility="visible">
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Действующие акции:\n- Дети до 5 лет имеют право на бесплатное посещение сеансов (за исключением сеансов в 3D), при условии, что они не занимают отдельного места в зале.\n- Для зрителей до 12 лет цена детского билета на сеансы, начинающиеся до 19:00, составляет 150 руб.\n- С понедельника по среду стоимость билетов для студентов и пенсионеров составляет 150 руб. (требуется удостоверение).\n- Цены билетов на сеансы, начинающиеся после 23:00 такие же, как и на утренние сеансы (с 9:00 до 11:00)."
+                    android:id="@+id/textView15"
+                    android:layout_margin="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/mani_adres">
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:text="ООО «Мичуринск - Фильм»
+        \nАдрес: 393764, Тамбовская область, г. Мичуринск, ул. Советская, д.306
+        \nТелефон/факс: 8(47545)5-21-91
+        \ne-mail: mfilm68@mail.ru" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Написать письмо\nmfilm68@mail.ru"
+                    android:id="@+id/button6"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:background="@android:drawable/ic_dialog_email" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="План красного зала"
+                    android:textSize="20sp"
+                    android:gravity="center" />
+
+                <dmitriy.deomin.kinooctober.libries.TouchImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView3"
+                    android:src="@drawable/red"
+                    android:scaleType="fitXY"  />
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="План зелёного зала"
+                    android:textSize="20sp"
+                    android:gravity="center" />
+
+                <dmitriy.deomin.kinooctober.libries.TouchImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView2"
+                    android:src="@drawable/green"
+                    android:scaleType="fitXY" />
+
+                <dmitriy.deomin.kinooctober.libries.TextView_new
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="План синего зала"
+                    android:textSize="20sp"
+                    android:gravity="center" />
+
+                <dmitriy.deomin.kinooctober.libries.TouchImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView"
+                    android:src="@drawable/blu"
+                    android:scaleType="fitXY" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="3dp"
+        app:cardPreventCornerOverlap="false"
+        android:elevation="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp">
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fon_otzivi_delegat">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Про киндзазу"
+        android:id="@+id/ozivi_textView_zag_com"
+        android:layout_gravity="left|center_horizontal"
+        android:textSize="20sp"
+        android:layout_margin="5dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <dmitriy.deomin.kinooctober.libries.TextView_new
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Автор:"
+            android:id="@+id/textView17"
+            android:minWidth="50dp"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Владимир Путин"
+            android:id="@+id/ozivi_textView_avtor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <dmitriy.deomin.kinooctober.libries.TextView_new
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Фильм:"
+            android:id="@+id/textView18"
+            android:minWidth="50dp"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Киндзаза"
+            android:id="@+id/ozivi_textView_film" />
+    </LinearLayout>
+
+    <dmitriy.deomin.kinooctober.libries.TextView_new
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10.10.15"
+        android:id="@+id/ozivi_textView_data"
+        android:layout_margin="5dp"
+        android:textSize="10dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Мульт понравился , все прям как у нас в России"
+        android:id="@+id/ozivi_textView_comentariy"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+</LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

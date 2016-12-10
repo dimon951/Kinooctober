@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="fon">#31a78a</color>
+    <color name="post1">#29bf9a</color>
+    <color name="post2">#54ccae</color>
+    <color name="text">#060606</color>
+
+
+    <color name="purpur">#8174dd</color>
+    <color name="green">#e335bb21</color>
+    <color name="beliy">#127aff85</color>
+    <color name="siniy">#f44130e1</color>
+    <color name="temnogeleniy">#E82F5E1A</color>
+    <color name="orange">#ffebff18</color>
+    <color name="orange_pres">#ffcbdb16</color>
+    <color name="dark_red">#d01515</color>
+    <color name="blu_bridg">#02ddff</color>
+    <color name="svetlo_geltiy">#dfead03e</color>
+
+
+</resources>
