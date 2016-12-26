@@ -36,7 +36,9 @@
                     android:onClick="Clik"
                     android:src="@mipmap/ic_launcher"
                     android:layout_gravity="center"
-                    android:visibility="visible" />
+                    android:scaleType="fitStart"
+                    android:adjustViewBounds="true"
+                   />
             </LinearLayout>
 
             <LinearLayout

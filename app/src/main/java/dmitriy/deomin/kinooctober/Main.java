@@ -38,6 +38,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
@@ -96,6 +97,8 @@ public class Main extends FragmentActivity implements View.OnClickListener {
     public static int TIME_PROVERKI_INTERNETA; //время для провверки норм интернета милисек
     boolean time_show_reklamma; //
     public static boolean visi;//true при активном приложении
+    public static int TOLSHINA_RAMKI; // толщина рамки обводки картинок
+    public  static int RADIUS_CKRUGLENIA;//радиус скругления краёв у картинок
 
     public static LinearLayout liner_boss;
 
@@ -138,6 +141,10 @@ public class Main extends FragmentActivity implements View.OnClickListener {
         } else {
             COLOR_TEXT = save_read_int("color_text");
         }
+
+        //
+        TOLSHINA_RAMKI = 1;
+        RADIUS_CKRUGLENIA = 10;
 
 
 
@@ -320,21 +327,23 @@ public class Main extends FragmentActivity implements View.OnClickListener {
                 //скроем окошко обобновлении
                 ((LinearLayout) findViewById(R.id.liner_update_panel)).setVisibility(View.GONE);
 
-                if (save_read("Run_serviv_mich_kino").equals("on")) {
-                    if (isNetworkConnected()) {
-                        Proverka_speed p = new Proverka_speed();
-                        try {
-                            if (p.execute().get()) {
-                                //запустить сервис
-                                startService(new Intent(Main.this, Run_update_site.class));
-                            }
-                        } catch (InterruptedException e) {
-                            Log.e("TTT", "итернет хуйня");
-                        } catch (ExecutionException e) {
-                            Log.e("TTT", "итернет хуйня");
-                        }
-                    }
-                }
+
+            //эта хеня тормозит запуск проиги потом надо подшаманить
+//                if (save_read("Run_serviv_mich_kino").equals("on")) {
+//                    if (isNetworkConnected()) {
+//                        Proverka_speed p = new Proverka_speed();
+//                        try {
+//                            if (p.execute().get()) {
+//                                //запустить сервис
+//                                startService(new Intent(Main.this, Run_update_site.class));
+//                            }
+//                        } catch (InterruptedException e) {
+//                            Log.e("TTT", "итернет хуйня");
+//                        } catch (ExecutionException e) {
+//                            Log.e("TTT", "итернет хуйня");
+//                        }
+//                    }
+//                }
             }
 
 //слушаем сервис и если че будем реагировать
@@ -488,6 +497,8 @@ public class Main extends FragmentActivity implements View.OnClickListener {
     public void Open_menu() { // на кнопку меню
         final AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, android.R.style.Theme_Holo));
         final View content = LayoutInflater.from(Main.this).inflate(R.layout.menu_progi,null);
+        content.setMinimumWidth(width_d);
+        content.setMinimumHeight(width_d/2);
         builder.setView(content);
 
         final AlertDialog alertDialog = builder.create();
@@ -527,6 +538,7 @@ public class Main extends FragmentActivity implements View.OnClickListener {
                     //запустить сервис
                     startService(new Intent(Main.this, Run_update_site.class));
                     button_servis.setText("Проверка запущена");
+                    Toast.makeText(getApplicationContext(),"Проверка обновлений запущена",Toast.LENGTH_SHORT).show();
                 }
 
                 alertDialog.cancel();

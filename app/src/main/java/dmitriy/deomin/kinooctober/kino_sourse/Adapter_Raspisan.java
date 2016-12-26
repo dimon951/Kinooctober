@@ -30,7 +30,9 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
+import com.makeramen.roundedimageview.RoundedTransformationBuilder;
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Transformation;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
@@ -53,12 +55,21 @@ public class Adapter_Raspisan extends SimpleAdapter {
     private ArrayList<Map<String, Object>> results;
     private Context context;
     Spannable text; // подкрашивание текста
+    //для обводки картинок рамкой
+    Transformation transformation;
 
     public Adapter_Raspisan(Context context, ArrayList<Map<String, Object>> data, int resource, String[] from, int[] to)
     {
         super(context, data, resource, from, to);
         this.results = data;
         this.context = context;
+
+        transformation = new RoundedTransformationBuilder()
+                .borderColor(Main.COLOR_TEXT)
+                .borderWidthDp(Main.TOLSHINA_RAMKI)
+                .cornerRadiusDp(Main.RADIUS_CKRUGLENIA)
+                .oval(false)
+                .build();
     }
 
     static class ViewHolder {
@@ -177,7 +188,7 @@ viewHolder.liner_raspisania_segoda_color.setOnClickListener(new View.OnClickList
         viewHolder.data.setText(format_nachalo(results.get(position).get("nachalo").toString()));
         viewHolder.opisanie.setText(format_diskription(results.get(position).get("description").toString()));
 
-        Picasso.with(context).load(results.get(position).get("image").toString()).into(viewHolder.delegat_ava);
+        Picasso.with(context).load(results.get(position).get("image").toString()).fit().transform(transformation).into(viewHolder.delegat_ava);
 
         viewHolder.delegat_ava.setOnClickListener(new View.OnClickListener() {
             @Override

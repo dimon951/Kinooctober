@@ -17,6 +17,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.support.annotation.RequiresApi;
 import android.util.Log;
+import android.widget.Toast;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -38,12 +39,14 @@ public class Run_update_site extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+        mSettings = getSharedPreferences("mysettings", Context.MODE_PRIVATE);
+
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+
             Log.i("TTT", "сервис запустился ");
-            mSettings = getSharedPreferences("mysettings", Context.MODE_PRIVATE);
 
             //*****************читаем настройку***************************
             String set;
@@ -327,5 +330,6 @@ public class Run_update_site extends Service {
         super.onDestroy();
         handler=null;
         Log.i("TTT","сервису пиздец");
+        Toast.makeText(getApplicationContext(),"Проверка обновлений остановлена",Toast.LENGTH_SHORT).show();
     }
 }

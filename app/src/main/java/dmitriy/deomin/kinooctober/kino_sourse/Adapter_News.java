@@ -14,7 +14,9 @@ import android.widget.LinearLayout;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
+import com.makeramen.roundedimageview.RoundedTransformationBuilder;
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Transformation;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -30,11 +32,21 @@ public class Adapter_News extends SimpleAdapter {
     private Context context;
     Spannable text; // подкрашивание текста
 
+    //для обводки картинок рамкой
+    Transformation transformation;
+
     public Adapter_News(Context context, ArrayList<Map<String, Object>> data, int resource, String[] from, int[] to)
     {
         super(context, data, resource, from, to);
         this.results = data;
         this.context = context;
+
+        transformation = new RoundedTransformationBuilder()
+                .borderColor(Main.COLOR_TEXT)
+                .borderWidthDp(Main.TOLSHINA_RAMKI)
+                .cornerRadiusDp(Main.RADIUS_CKRUGLENIA)
+                .oval(false)
+                .build();
     }
 
 
@@ -101,7 +113,11 @@ public class Adapter_News extends SimpleAdapter {
 
 
 //***********
-        Picasso.with(context).load(results.get(position).get("ava_news").toString()).into(viewHolder.ava_news_imag);
+        Picasso.with(context)
+                .load(results.get(position).get("ava_news").toString())
+                .transform(transformation)
+                .into(viewHolder.ava_news_imag);
+
       //  Log.d("TTT", "v delegate vot chto prichodit s avoy " + results.get(position).get("ava_news").toString());
         return v;
     }

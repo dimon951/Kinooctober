@@ -15,7 +15,9 @@ import android.widget.LinearLayout;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
+import com.makeramen.roundedimageview.RoundedTransformationBuilder;
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Transformation;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -29,11 +31,21 @@ public class Adapter_Premiera extends SimpleAdapter {
     private Context context;
     Spannable text; // подкрашивание текста
 
+    //для обводки картинок рамкой
+    Transformation transformation;
+
     public Adapter_Premiera(Context context, ArrayList<Map<String, Object>> data, int resource, String[] from, int[] to)
     {
         super(context, data, resource, from, to);
         this.results = data;
         this.context = context;
+
+        transformation = new RoundedTransformationBuilder()
+                .borderColor(Main.COLOR_TEXT)
+                .borderWidthDp(Main.TOLSHINA_RAMKI)
+                .cornerRadiusDp(Main.RADIUS_CKRUGLENIA)
+                .oval(false)
+                .build();
     }
 
     static class ViewHolder {
@@ -81,7 +93,7 @@ public class Adapter_Premiera extends SimpleAdapter {
         viewHolder.pokaz_nachalo.setText(format_nachalo(results.get(position).get("nachalo").toString()));
         viewHolder.opisanie.setText(format_diskription(results.get(position).get("description").toString()));
 
-        Picasso.with(context).load(results.get(position).get("image").toString()).into(viewHolder.ava);
+        Picasso.with(context).load(results.get(position).get("image").toString()).fit().transform(transformation).into(viewHolder.ava);
         return v;
     }
     Spannable format_nachalo(String value){

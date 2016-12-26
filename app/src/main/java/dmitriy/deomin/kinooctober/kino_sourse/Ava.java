@@ -23,7 +23,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.johnpersano.supertoasts.SuperToast;
+import com.makeramen.roundedimageview.RoundedTransformationBuilder;
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Transformation;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -77,6 +79,9 @@ public class Ava extends Activity {
     String urlotz;
     Context context;
 
+    //для обводки картинок рамкой
+    Transformation transformation;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,6 +91,13 @@ public class Ava extends Activity {
 
         //во весь экран
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        transformation = new RoundedTransformationBuilder()
+                .borderColor(Main.COLOR_TEXT)
+                .borderWidthDp(Main.TOLSHINA_RAMKI)
+                .cornerRadiusDp(Main.RADIUS_CKRUGLENIA/2)
+                .oval(false)
+                .build();
 
         imageView  = (ImageView) findViewById(R.id.imageView_ava);
 
@@ -145,7 +157,7 @@ public class Ava extends Activity {
             smena_texta(true);
             Picasso.with(this)
                     .load(getIntent().getStringExtra("ava"))
-                    .resize(Main.width_d,Main.heigh_d)
+                    .transform(transformation)
                     .into(imageView);
 
             d_i_p_t = new Dowload_i_Parsing_text();

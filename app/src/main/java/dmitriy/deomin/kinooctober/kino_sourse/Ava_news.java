@@ -21,7 +21,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.github.johnpersano.supertoasts.SuperToast;
+import com.makeramen.roundedimageview.RoundedTransformationBuilder;
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Transformation;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -56,7 +58,8 @@ public class Ava_news extends Activity {
     TextView ozivi_textView_data;
     TextView ozivi_textView_comentariy;
     Button button_logo_ava_news;
-
+    //для обводки картинок рамкой
+    Transformation transformation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +67,14 @@ public class Ava_news extends Activity {
         setContentView(ava_news);
         //во весь экран
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        transformation = new RoundedTransformationBuilder()
+                .borderColor(Main.COLOR_TEXT)
+                .borderWidthDp(Main.TOLSHINA_RAMKI)
+                .cornerRadiusDp(Main.RADIUS_CKRUGLENIA/2)
+                .oval(false)
+                .build();
+
 
         imageView = (ImageView) findViewById(R.id.imageView_ava_news);
         img = (TouchImageView) findViewById(R.id.img);
@@ -98,6 +109,7 @@ public class Ava_news extends Activity {
             if (getIntent().getStringExtra("ava").length() > 30) { ////http://michurinsk-film.ru =25
                 Picasso.with(this)
                         .load(getIntent().getStringExtra("ava"))
+                        .transform(transformation)
                         .into(imageView);
             }
             if (getIntent().getStringExtra("ava_dis").length() > 30) { ////http://michurinsk-film.ru =25
