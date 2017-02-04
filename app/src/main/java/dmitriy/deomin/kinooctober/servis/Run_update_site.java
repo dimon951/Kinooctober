@@ -21,6 +21,8 @@ import android.widget.Toast;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -227,10 +229,12 @@ public class Run_update_site extends Service {
 
 
 
-    class  Her_nevs extends AsyncTask<Void,Void,String>{
+   private class  Her_nevs extends AsyncTask<Void,Void,String>{
 
         @Override
         protected String doInBackground(Void... params) {
+
+
             try {
                 doc = Jsoup.connect("http://michurinsk-film.ru/news/").timeout(3000).get();
             } catch (IOException e) {
@@ -238,7 +242,24 @@ public class Run_update_site extends Service {
             }
 
             if(doc!=null){
-                return doc.select(".block").first().select(".news-list").get(0).select(".date").text();
+
+                Element element_blok = doc.select(".block").first();
+                if(element_blok!=null){
+
+                    Element element_news = element_blok.select(".news-list").get(0);
+                    if(element_news!=null){
+
+                        Elements element_date = element_news.select(".date");
+                        if(element_date.isEmpty()){
+
+                            return  element_date.text();
+
+                        }else return "";
+
+                    }else return "";
+
+                }else return "";
+
             }else {
                 return "";
             }
@@ -250,7 +271,7 @@ public class Run_update_site extends Service {
         }
     }
 
-    class  Her_raspisanie extends AsyncTask<Void,Void,String>{
+  private class  Her_raspisanie extends AsyncTask<Void,Void,String>{
 
         @Override
         protected String doInBackground(Void... params) {
@@ -261,7 +282,27 @@ public class Run_update_site extends Service {
             }
 
             if(doc!=null){
-                return doc.select(".block").first().select(".event").get(0).select(".title").text();
+
+                //сделаем проверки и если все пучком вернём
+
+                Element element_blok = doc.select(".block").first();
+                if(element_blok!=null){
+
+                    Element element_event = element_blok.select(".event").get(0);
+                    if(element_event!=null){
+
+                        Elements element_title = element_event.select(".title");
+
+                        if(element_title.isEmpty()){
+
+                            return element_title.text();
+
+                        }else {return "";}
+
+                    }else {return "";}
+
+                }else {return "";}
+
             }else {
                 return "";
             }
@@ -296,7 +337,7 @@ public class Run_update_site extends Service {
         return false;
     }
 
-    class Proverka_speed extends AsyncTask<Void,Void,Boolean>{
+  private class Proverka_speed extends AsyncTask<Void,Void,Boolean>{
 
         @Override
         protected Boolean doInBackground(Void... params) {

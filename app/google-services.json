@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1095491645811",
+    "firebase_url": "https://kinooctober-a2fbb.firebaseio.com",
+    "project_id": "kinooctober-a2fbb",
+    "storage_bucket": "kinooctober-a2fbb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095491645811:android:a4bc503113c61bc3",
+        "android_client_info": {
+          "package_name": "dmitriy.deomin.kinooctober"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1095491645811-vb987n4nk62nciqfsjlna4eb0u3rrl7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzTgp9wsoxuKNTUqTglnFHRyg8ieu18yw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1095491645811-vb987n4nk62nciqfsjlna4eb0u3rrl7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
