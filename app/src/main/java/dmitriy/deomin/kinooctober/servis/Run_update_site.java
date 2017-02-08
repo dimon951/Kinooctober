@@ -250,7 +250,7 @@ public class Run_update_site extends Service {
                     if(element_news!=null){
 
                         Elements element_date = element_news.select(".date");
-                        if(element_date.isEmpty()){
+                        if(element_date!=null){
 
                             return  element_date.text();
 
@@ -293,7 +293,7 @@ public class Run_update_site extends Service {
 
                         Elements element_title = element_event.select(".title");
 
-                        if(element_title.isEmpty()){
+                        if(element_title!=null){
 
                             return element_title.text();
 

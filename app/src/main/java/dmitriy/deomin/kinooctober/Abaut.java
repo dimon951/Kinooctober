@@ -8,6 +8,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -17,6 +19,9 @@ import com.romainpiel.shimmer.ShimmerTextView;
 
 import java.util.Timer;
 import java.util.TimerTask;
+
+import dmitriy.deomin.kinooctober.Info.Politika;
+import dmitriy.deomin.kinooctober.Info.Pravila_kinoteatra;
 
 public class Abaut extends Activity {
 
@@ -76,6 +81,13 @@ public class Abaut extends Activity {
 
     public void finish(View view) {
         this.finish();
+    }
+
+    public void koni(View v) {
+        Animation anim = AnimationUtils.loadAnimation(this, R.anim.myalpha);
+        v.startAnimation(anim);
+        Intent p = new Intent(this, Politika.class);
+        startActivity(p);
     }
 
 

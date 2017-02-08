@@ -63,6 +63,8 @@
         <activity
             android:name=".Info.Pravila_kinoteatra"
             android:label="@string/title_activity_pravila_kinoteatra" />
+        <activity android:name=".Info.Politika"
+            android:label="Политика Конфиденциальности"/>
         <activity
             android:name=".User_kabinet.Kabinet"
             android:label="@string/title_activity_kabinet" />
