@@ -8,8 +8,8 @@ android {
         applicationId "dmitriy.deomin.kinooctober"
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 52
-        versionName "5.2"
+        versionCode 54
+        versionName "5.4"
     }
     buildTypes {
         release {

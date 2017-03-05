@@ -1,6 +1,8 @@
 package dmitriy.deomin.kinooctober.kino_sourse;
 
 import android.app.AlertDialog;
+import android.app.SearchManager;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -197,6 +199,23 @@ viewHolder.liner_raspisania_segoda_color.setOnClickListener(new View.OnClickList
                 i.putExtra("ava", results.get(position).get("image").toString());
                 i.putExtra("item", results.get(position).get("item_podrobno").toString());
                 context.startActivity(i);
+            }
+        });
+
+        viewHolder.title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                ComponentName cm = new ComponentName(
+//                        "com.google.android.youtube",
+//                        "com.google.android.apps.youtube.app.WatchWhileActivity");
+//
+//                Intent intent = new Intent();
+//                intent.setComponent(cm);
+//                context.startActivity(intent);
+
+                Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+                intent.putExtra(SearchManager.QUERY,results.get(position).get("title").toString() );
+                context.startActivity(intent);
             }
         });
 
