@@ -76,6 +76,8 @@ public class Main extends FragmentActivity implements View.OnClickListener {
     static ViewPager viewPager;
     static Myadapter myadapter;
 
+    TextView time_reklama;
+
     public static int width_d;
     public static int heigh_d;
 
@@ -269,9 +271,12 @@ public class Main extends FragmentActivity implements View.OnClickListener {
         mAdView.loadAd(adRequest);
         time_show_reklamma = false;  //если бы черти isVisible mAdView сделали это херня бы не пригодилась
 
+        time_reklama = (TextView)findViewById(R.id.time_reklama_text);
+
         //если нет интеренета скроем еЁ
         if (!isNetworkConnected()) {
             mAdView.setVisibility(View.GONE);
+            time_reklama.setVisibility(View.GONE);
         } else {
             //через 10 секунд скроем её(пока так потом можно регулировать от количества постов)
             final Handler handler = new Handler();
@@ -282,10 +287,15 @@ public class Main extends FragmentActivity implements View.OnClickListener {
                     if (visi) {
                         if (time_show_reklamma) {
                             mAdView.setVisibility(View.GONE); // скроем рекламу и поток больше не запустится
+                            time_reklama.setVisibility(View.GONE);
                         } else {
                             //иначе покажем
                             mAdView.setVisibility(View.VISIBLE);
                             time_show_reklamma = true; // это нужно чтоб знать что реклама показна
+                            //и текст сколько осталось времени
+                            time_reklama.setVisibility(View.VISIBLE);
+                            pokaz_smeny_time();
+
                             handler.postDelayed(this, 1000 * TIME_SHOW_REKLAMA); // через 10 секунд вырубим рекламу
                         }
                     }else {
@@ -432,6 +442,35 @@ public class Main extends FragmentActivity implements View.OnClickListener {
             }
         });
     }
+
+
+
+    public void pokaz_smeny_time(){
+
+        final int[] time_visible = {TIME_SHOW_REKLAMA};
+
+        final Handler handler = new Handler();
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                Log.v("TTT","ebasit");
+                if (visi) {
+                    time_visible[0]--;
+                    time_reklama.setText("Реклама скроется через  " + String.valueOf(time_visible[0]));
+
+                    if(time_visible[0]>0){
+                        handler.postDelayed(this, 1000); // через 10 секунд вырубим рекламу
+                    }else{
+                        time_reklama.setVisibility(View.GONE);
+                    }
+
+                }else {
+                    handler.postDelayed(this, 1000 * 2); // если приложение свернуто пока в пустую погоняем поток
+                }
+            }
+        });
+    }
+
 
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
