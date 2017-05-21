@@ -144,22 +144,6 @@
                 </LinearLayout>
 
             </LinearLayout>
-            <TextView
-                android:id="@+id/time_reklama_text"
-                android:layout_width="match_parent"
-                android:layout_height="7dp"
-                android:layout_marginRight="4dp"
-                android:gravity="right"
-                android:text="TextView"
-                android:textSize="5sp" />
-            <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        ads:adSize="SMART_BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"
-        android:layout_weight="0">
-    </com.google.android.gms.ads.AdView>
 
         </LinearLayout>
 

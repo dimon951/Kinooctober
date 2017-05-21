@@ -44,8 +44,6 @@ import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.github.johnpersano.supertoasts.SuperToast;
 import com.github.johnpersano.supertoasts.util.Style;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.nhaarman.supertooltips.ToolTip;
 import com.nhaarman.supertooltips.ToolTipRelativeLayout;
 import com.nhaarman.supertooltips.ToolTipView;
@@ -57,7 +55,6 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.concurrent.ExecutionException;
 
 import dmitriy.deomin.kinooctober.Info.Pravila_kinoteatra;
 import dmitriy.deomin.kinooctober.Info.Vopr;
@@ -76,8 +73,6 @@ public class Main extends FragmentActivity implements View.OnClickListener {
     static ViewPager viewPager;
     static Myadapter myadapter;
 
-    TextView time_reklama;
-
     public static int width_d;
     public static int heigh_d;
 
@@ -95,9 +90,9 @@ public class Main extends FragmentActivity implements View.OnClickListener {
     public static int COLOR_ITEM;
     public static int COLOR_ITEM2;
     public static int COLOR_TEXT;
-    static public int TIME_SHOW_REKLAMA; // сколько показывать рекламу
+
     public static int TIME_PROVERKI_INTERNETA; //время для провверки норм интернета милисек
-    boolean time_show_reklamma; //
+
     public static boolean visi;//true при активном приложении
     public static int TOLSHINA_RAMKI; // толщина рамки обводки картинок
     public  static int RADIUS_CKRUGLENIA;//радиус скругления краёв у картинок
@@ -150,7 +145,6 @@ public class Main extends FragmentActivity implements View.OnClickListener {
 
 
 
-        TIME_SHOW_REKLAMA = 10; //секнды показа рекламы
         visi = true;  // приложение активно
         TIME_PROVERKI_INTERNETA = 600; // msek
 
@@ -265,45 +259,7 @@ public class Main extends FragmentActivity implements View.OnClickListener {
 
 
 
-        //реклама
-        final AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-        time_show_reklamma = false;  //если бы черти isVisible mAdView сделали это херня бы не пригодилась
 
-        time_reklama = (TextView)findViewById(R.id.time_reklama_text);
-
-        //если нет интеренета скроем еЁ
-        if (!isNetworkConnected()) {
-            mAdView.setVisibility(View.GONE);
-            time_reklama.setVisibility(View.GONE);
-        } else {
-            //через 10 секунд скроем её(пока так потом можно регулировать от количества постов)
-            final Handler handler = new Handler();
-            handler.post(new Runnable() {
-                @Override
-                public void run() {
-                    Log.v("TTT","ebasit");
-                    if (visi) {
-                        if (time_show_reklamma) {
-                            mAdView.setVisibility(View.GONE); // скроем рекламу и поток больше не запустится
-                            time_reklama.setVisibility(View.GONE);
-                        } else {
-                            //иначе покажем
-                            mAdView.setVisibility(View.VISIBLE);
-                            time_show_reklamma = true; // это нужно чтоб знать что реклама показна
-                            //и текст сколько осталось времени
-                            time_reklama.setVisibility(View.VISIBLE);
-                            pokaz_smeny_time();
-
-                            handler.postDelayed(this, 1000 * TIME_SHOW_REKLAMA); // через 10 секунд вырубим рекламу
-                        }
-                    }else {
-                        handler.postDelayed(this, 1000 * 2); // если приложение свернуто пока в пустую погоняем поток
-                    }
-                }
-            });
-        }
 
 
 
@@ -337,23 +293,6 @@ public class Main extends FragmentActivity implements View.OnClickListener {
                 //скроем окошко обобновлении
                 ((LinearLayout) findViewById(R.id.liner_update_panel)).setVisibility(View.GONE);
 
-
-            //эта хеня тормозит запуск проиги потом надо подшаманить
-//                if (save_read("Run_serviv_mich_kino").equals("on")) {
-//                    if (isNetworkConnected()) {
-//                        Proverka_speed p = new Proverka_speed();
-//                        try {
-//                            if (p.execute().get()) {
-//                                //запустить сервис
-//                                startService(new Intent(Main.this, Run_update_site.class));
-//                            }
-//                        } catch (InterruptedException e) {
-//                            Log.e("TTT", "итернет хуйня");
-//                        } catch (ExecutionException e) {
-//                            Log.e("TTT", "итернет хуйня");
-//                        }
-//                    }
-//                }
             }
 
 //слушаем сервис и если че будем реагировать
@@ -442,35 +381,6 @@ public class Main extends FragmentActivity implements View.OnClickListener {
             }
         });
     }
-
-
-
-    public void pokaz_smeny_time(){
-
-        final int[] time_visible = {TIME_SHOW_REKLAMA};
-
-        final Handler handler = new Handler();
-        handler.post(new Runnable() {
-            @Override
-            public void run() {
-                Log.v("TTT","ebasit");
-                if (visi) {
-                    time_visible[0]--;
-                    time_reklama.setText("Реклама скроется через  " + String.valueOf(time_visible[0]));
-
-                    if(time_visible[0]>0){
-                        handler.postDelayed(this, 1000); // через 10 секунд вырубим рекламу
-                    }else{
-                        time_reklama.setVisibility(View.GONE);
-                    }
-
-                }else {
-                    handler.postDelayed(this, 1000 * 2); // если приложение свернуто пока в пустую погоняем поток
-                }
-            }
-        });
-    }
-
 
     @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
