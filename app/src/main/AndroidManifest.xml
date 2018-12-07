@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="dmitriy.deomin.kinooctober"
     android:installLocation="auto">
 
@@ -20,7 +21,8 @@
         android:label="@string/app_name"
         android:launchMode="singleTop"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".Main"
             android:label="Кинотеатр Октябрь"
@@ -63,17 +65,19 @@
         <activity
             android:name=".Info.Pravila_kinoteatra"
             android:label="@string/title_activity_pravila_kinoteatra" />
-        <activity android:name=".Info.Politika"
+        <activity
+            android:name=".Info.Politika"
             android:label="Политика Конфиденциальности"/>
         <activity
             android:name=".User_kabinet.Kabinet"
             android:label="@string/title_activity_kabinet" />
-        <activity android:name=".Fonts_vibor" />
+        <activity
+            android:name=".Fonts_vibor" />
 
         <service
             android:name=".servis.Run_update_site"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
         <receiver android:name=".servis.BootCompletedReceiver">
             <intent-filter>
