@@ -23,6 +23,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+
+        <!--эта поебень нужна для рекламмы-->
+        <!--++++++++++++++++++++++++++++++++++++++-->
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.ca-app-pub-7908895047124036~2310263101"
+            android:value="ca-app-pub-7908895047124036/3786996300"/>
+        <!--+++++++++++++++++++++++++++++++++++++++++++++++++++-->
         <activity
             android:name=".Main"
             android:label="Кинотеатр Октябрь"

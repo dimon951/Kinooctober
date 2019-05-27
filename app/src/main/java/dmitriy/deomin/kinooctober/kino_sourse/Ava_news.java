@@ -107,13 +107,13 @@ public class Ava_news extends Activity {
 
             smena_texta(true);
             if (getIntent().getStringExtra("ava").length() > 30) { ////http://michurinsk-film.ru =25
-                Picasso.with(this)
+                Picasso.get()
                         .load(getIntent().getStringExtra("ava"))
                         .transform(transformation)
                         .into(imageView);
             }
             if (getIntent().getStringExtra("ava_dis").length() > 30) { ////http://michurinsk-film.ru =25
-                Picasso.with(this)
+                Picasso.get()
                         .load(getIntent().getStringExtra("ava_dis"))
                         .into(img);
 

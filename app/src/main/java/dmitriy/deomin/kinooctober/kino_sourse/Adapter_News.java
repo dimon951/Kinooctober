@@ -105,7 +105,7 @@ public class Adapter_News extends SimpleAdapter {
 //discription
         viewHolder.text_news.setText(format_diskription(results.get(position).get("description").toString()));
 
-        Picasso.with(context)
+        Picasso.get()
                 .load(results.get(position).get("ava_dis").toString())
                 .resize(Main.width_d, Main.heigh_d/2)
                 .centerCrop()
@@ -113,7 +113,7 @@ public class Adapter_News extends SimpleAdapter {
 
 
 //***********
-        Picasso.with(context)
+        Picasso.get()
                 .load(results.get(position).get("ava_news").toString())
                 .transform(transformation)
                 .into(viewHolder.ava_news_imag);

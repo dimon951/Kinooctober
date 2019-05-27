@@ -52,10 +52,10 @@
                         android:textStyle="bold" />
 
                     <dmitriy.deomin.kinooctober.libries.TextView_new
+                        android:id="@+id/textView9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=" с 9:00 до 12:00 - 150р \nпосле 12:00 - 250р"
-                        android:id="@+id/textView9" />
+                        android:text=" с 9:00 до 12:00 - 220р \nпосле 12:00 - 270р" />
 
                 </LinearLayout>
 
@@ -78,10 +78,10 @@
                         android:textStyle="bold" />
 
                     <dmitriy.deomin.kinooctober.libries.TextView_new
+                        android:id="@+id/textView10"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=" с 9:00 до 12:00 - 200р \nпосле 12:00 - 300р"
-                        android:id="@+id/textView10" />
+                        android:text=" с 9:00 до 12:00 - 270р \nпосле 12:00 - 320р" />
 
                 </LinearLayout>
 
@@ -97,7 +97,7 @@
                 <dmitriy.deomin.kinooctober.libries.TextView_new
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Действующие акции:\n- Дети до 5 лет имеют право на бесплатное посещение сеансов (за исключением сеансов в 3D), при условии, что они не занимают отдельного места в зале.\n- Для зрителей до 12 лет цена детского билета на сеансы, начинающиеся до 19:00, составляет 150 руб.\n- С понедельника по среду стоимость билетов для студентов и пенсионеров составляет 150 руб. (требуется удостоверение).\n- Цены билетов на сеансы, начинающиеся после 23:00 такие же, как и на утренние сеансы (с 9:00 до 11:00)."
+                    android:text="@string/n_5_3d_n_12_19_00_150_n_150_n_23_00_9_00_11_00"
                     android:id="@+id/textView15"
                     android:layout_margin="5dp" />
 

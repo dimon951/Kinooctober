@@ -190,7 +190,7 @@ viewHolder.liner_raspisania_segoda_color.setOnClickListener(new View.OnClickList
         viewHolder.data.setText(format_nachalo(results.get(position).get("nachalo").toString()));
         viewHolder.opisanie.setText(format_diskription(results.get(position).get("description").toString()));
 
-        Picasso.with(context).load(results.get(position).get("image").toString()).fit().transform(transformation).into(viewHolder.delegat_ava);
+        Picasso.get().load(results.get(position).get("image").toString()).fit().transform(transformation).into(viewHolder.delegat_ava);
 
         viewHolder.delegat_ava.setOnClickListener(new View.OnClickListener() {
             @Override

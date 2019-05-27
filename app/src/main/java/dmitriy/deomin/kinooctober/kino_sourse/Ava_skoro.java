@@ -103,7 +103,7 @@ public class Ava_skoro extends Activity {
 
             smena_texta(true);
             if(getIntent().getStringExtra("ava").length()>1) {
-                Picasso.with(this)
+                Picasso.get()
                         .load(getIntent().getStringExtra("ava"))
                         .transform(transformation)
                         .into(imageView);

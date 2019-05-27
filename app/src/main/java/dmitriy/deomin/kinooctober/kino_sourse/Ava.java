@@ -155,7 +155,7 @@ public class Ava extends Activity {
         if(isNetworkConnected()) {
 
             smena_texta(true);
-            Picasso.with(this)
+            Picasso.get()
                     .load(getIntent().getStringExtra("ava"))
                     .transform(transformation)
                     .into(imageView);

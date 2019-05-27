@@ -93,7 +93,7 @@ public class Adapter_Premiera extends SimpleAdapter {
         viewHolder.pokaz_nachalo.setText(format_nachalo(results.get(position).get("nachalo").toString()));
         viewHolder.opisanie.setText(format_diskription(results.get(position).get("description").toString()));
 
-        Picasso.with(context).load(results.get(position).get("image").toString()).fit().transform(transformation).into(viewHolder.ava);
+        Picasso.get().load(results.get(position).get("image").toString()).fit().transform(transformation).into(viewHolder.ava);
         return v;
     }
     Spannable format_nachalo(String value){

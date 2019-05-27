@@ -44,6 +44,9 @@ import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.github.johnpersano.supertoasts.SuperToast;
 import com.github.johnpersano.supertoasts.util.Style;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nhaarman.supertooltips.ToolTip;
 import com.nhaarman.supertooltips.ToolTipRelativeLayout;
 import com.nhaarman.supertooltips.ToolTipView;
@@ -257,7 +260,12 @@ public class Main extends FragmentActivity implements View.OnClickListener {
 
 
 
-
+        //реклама
+        //-------------------------------------------------------------------------
+        MobileAds.initialize(this, "ca-app-pub-7908895047124036~2310263101");
+        AdView mAdView= findViewById(R.id.adView);
+        mAdView.loadAd(new AdRequest.Builder().build());
+        //--------------------------------------------------------------------------
 
 
 
